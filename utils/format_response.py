@@ -14,3 +14,7 @@ def print_response(res: Response):
     print("Elapsed: ", res.elapsed)
     print("Request: ", res.request)
     print("-" * 80)
+
+
+def is_success(status_code: int) -> bool:
+    return (status_code == 200) | (status_code == 204)
